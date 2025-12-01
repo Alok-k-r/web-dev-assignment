@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio — Updated</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="logo">My Portfolio</h1>
+      <nav class="main-nav" aria-label="Main navigation" id="nav1">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h2>Hi! I'm <strong>Alok kumar</strong></h2>
+          <p>Aspiring software engineer who loves <i>Web Dev, Python & Coding Logic.</i></p>
+          <p class="role"><span class="role-animate">Full Stack Developer</span></p>
+          <a class="cta" href="#projects">View Projects</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://cdn.wallpapersafari.com/63/77/Ni9GVF.png" alt="Alok kumar" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <div class="about-inner">
+        <img src="https://cdn.wallpapersafari.com/63/77/Ni9GVF.png" alt="Alok kumar" class="about-img" />
+        <div class="about-text">
+          <p>I'm currently pursuing B.tech cse(AI/ML), based in New Delhi, India. I specialize in responsive front-end development and enjoy learning Java, computer architecture and full-stack development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="card">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid" role="list">
+        <div class="skill">HTML <span class="level">Intermediate</span></div>
+        <div class="skill">CSS <span class="level">Intermediate</span></div>
+        <div class="skill">Java <span class="level">Beginner</span></div>
+        <div class="skill">JavaScript <span class="level">Beginner</span></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="card">
+      <h2>My Projects</h2>
+      <div id="project">
+        <div class="img-container project-card">
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>Built with HTML and CSS for personal branding. Responsive + animations.</p>
+          </div>
+        </div>
+        <div class="img-container project-card">
+          <div class="project-info">
+            <h3>YouTube Clone</h3>
+            <p>A demo to understand data flow and UI improvements using JS and CSS.</p>
+          </div>
+        </div>
+        <div class="img-container project-card">
+          <div class="project-info">
+            <h3>Weather App</h3>
+            <p>Displays real-time weather using API integration and clean UI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <form action="#" method="post" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Alok kumar. All Rights Reserved.</p>
+  </footer>
+
+  <a href="#top" id="backToTop" title="Back to Top">Back To Top</a>
+
+  <script>
+    // small nav toggle for mobile
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
